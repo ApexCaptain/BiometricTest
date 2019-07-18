@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">BiometricTest</string>
+
+
+
+
+    <string name="txt_dft_biometric_fingerprint_title">
+        Fingerprint - Title
+    </string>
+
+    <string name="txt_dft_biometric_fingerprint_description">
+        Fingerprint - Description
+    </string>
+
+    <string name="txt_dft_biometric_fingerprint_subtitle">
+        Fingerprint - Subtitle
+    </string>
+
+    <string name="txt_dft_biometric_fingerprint_negativeButtonText">
+        Fingerprint - Cancel
+    </string>
+
+
+
+
+    <string name="txt_dft_biometric_iris_title">
+        Iris - Title
+    </string>
+
+    <string name="txt_dft_biometric_iris_description">
+        Iris - Description
+    </string>
+
+    <string name="txt_dft_biometric_iris_subtitle">
+        Iris - Subtitle
+    </string>
+
+    <string name="txt_dft_biometric_iris_negativeButtonText">
+        Iris - Cancel
+    </string>
+
+
+
+
+    <string name="txt_dft_biometric_facial_recognition_title">
+        Facial Recognition - Title
+    </string>
+
+    <string name="txt_dft_biometric_facial_recognition_description">
+        Facial Recognition - Description
+    </string>
+
+    <string name="txt_dft_biometric_facial_recognition_subtitle">
+        Facial Recognition - Subtitle
+    </string>
+
+    <string name="txt_dft_biometric_facial_recognition_negativeButtonText">
+        Facial Recognition - Cancel
+    </string>
+
+</resources>
