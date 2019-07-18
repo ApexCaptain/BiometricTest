@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         (application as MyApplication).biometricManagerComponent.inject(this)
         finger_print_request_button.setOnClickListener {
-            mBiometricManager.requestIrisAuthentication(this) // 홍채인식 미지원으로 Deprecate 처리
+            //mBiometricManager.requestIrisAuthentication(this) // 홍채인식 미지원으로 Deprecate 처리
             mBiometricManager.requestFingerprintAuthentication(this)
                 .onUnsupported {
                     // 아직 지원되지 않는 인증 메소드의 경우
@@ -29,7 +29,8 @@ class MainActivity : AppCompatActivity() {
                 .onError {
                     // 인증 도중 에러가 발생한 경우
                     errorCode, errString ->
-                    Toast.makeText(this, getString(R.string.txt_fingerprint_authentication_request_error, errorCode, errString), Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,
+                        getString(R.string.txt_fingerprint_authentication_request_error, errorCode, errString), Toast.LENGTH_LONG).show()
                 }
                 .onSucceed {
                     // 인증에 성공한 경우

@@ -1,8 +1,14 @@
 package com.gmail.ayteneve93.apex.biometrictest.authentication.biometric
 
+import android.Manifest
+import android.app.KeyguardManager
+import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import androidx.biometric.BiometricPrompt
+import androidx.core.app.ActivityCompat
 import com.gmail.ayteneve93.apex.biometrictest.R
 
 /**
@@ -18,6 +24,18 @@ class BiometricManager constructor(
     private val mBiometricRequestResultListenerMap: BiometricRequestResultListenerMap){
 
     private var mIncrementalRequestCode : Int = 0
+
+    fun checkIsFingerprintAuthenticationAvailable(context: Context) : Boolean {
+        val keyguardManager = context.getSystemService(Context.KEYGUARD_SERVICE) as KeyguardManager
+        val packageManager = context.packageManager
+        if(
+            Build.VERSION.SDK_INT < Build.VERSION_CODES.M
+            || !packageManager.hasSystemFeature(PackageManager.FEATURE_FINGERPRINT)
+            || !keyguardManager.isKeyguardSecure
+            || ActivityCompat.checkSelfPermission(context, Manifest.permission.USE_BIOMETRIC)!= PackageManager.PERMISSION_GRANTED
+                ) return false
+        return true
+    }
 
     /**
      * BiometricActivity 를 거쳐 지문 인식을 요청합니다. 별도의 Callback 클래스 인스턴스를 통해
