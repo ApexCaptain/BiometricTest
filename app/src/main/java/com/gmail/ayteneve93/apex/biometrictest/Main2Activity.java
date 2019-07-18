@@ -18,6 +18,7 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         ((MyApplication)getApplication()).getBiometricManagerComponent().inject(this);
+
         mBiometricManager.requestFingerprintAuthentication(this, (biometricRequestResult, errorCode, errString) -> {
             switch (biometricRequestResult) {
                 case UNSUPPORTED:
