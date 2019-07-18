@@ -55,6 +55,19 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/ApplicationCommon',
+                    'src/main/ApplicationCommon/BiometricManager',
+
+                    'src/main/Activities',
+                    'src/main/Activities/Main',
+                    'src/main/Activities/Main2'
+            ]
+        }
+    }
+
     dataBinding.enabled = true
 
 }

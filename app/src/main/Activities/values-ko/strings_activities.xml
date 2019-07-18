@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="txt_fingerprint_authentication_request_unsupported">
+        지원되지 않는 인증방식입니다.
+    </string>
+
+    <string name="txt_fingerprint_authentication_request_error">
+        인증 도중 에러가 발생했습니다.
+        \n에러코드 : %1$d, 에러 메시지 : %2$s
+    </string>
+
+    <string name="txt_fingerprint_authentication_request_succeed">
+        지문 인증에 성공하였습니다!
+    </string>
+
+    <string name="txt_fingerprint_authentication_request_failure">
+        지문 인증에 실패하였습니다.
+    </string>
+
+</resources>

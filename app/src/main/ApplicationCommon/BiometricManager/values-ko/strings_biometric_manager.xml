@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="txt_dft_biometric_fingerprint_title">
+        지문인증 - 타이틀
+    </string>
+
+    <string name="txt_dft_biometric_fingerprint_description">
+        지문인증 - 설명
+    </string>
+
+    <string name="txt_dft_biometric_fingerprint_subtitle">
+        지문인증 - 부제목
+    </string>
+
+    <string name="txt_dft_biometric_fingerprint_negativeButtonText">
+        지문인증 - 취소
+    </string>
+
+
+
+
+    <string name="txt_dft_biometric_iris_title">
+        홍채인증 - 타이틀
+    </string>
+
+    <string name="txt_dft_biometric_iris_description">
+        홍채인증 - 설명
+    </string>
+
+    <string name="txt_dft_biometric_iris_subtitle">
+        홍채인증 - 부제목
+    </string>
+
+    <string name="txt_dft_biometric_iris_negativeButtonText">
+        홍채인증 - 취소
+    </string>
+
+
+
+
+    <string name="txt_dft_biometric_facial_recognition_title">
+        안면인증 - 타이틀
+    </string>
+
+    <string name="txt_dft_biometric_facial_recognition_description">
+        안면인증 - 설명
+    </string>
+
+    <string name="txt_dft_biometric_facial_recognition_subtitle">
+        안면인증 - 부제목
+    </string>
+
+    <string name="txt_dft_biometric_facial_recognition_negativeButtonText">
+        안면인증 - 취소
+    </string>
+
+</resources>

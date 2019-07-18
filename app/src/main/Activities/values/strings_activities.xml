@@ -1,0 +1,20 @@
+<resources>
+
+    <string name="txt_fingerprint_authentication_request_unsupported">
+        Unsupported Authentication Method
+    </string>
+
+    <string name="txt_fingerprint_authentication_request_error">
+        An error occurred while trying to authenticate.
+        \nError Code : %1$d, Error Message : %2$s
+    </string>
+
+    <string name="txt_fingerprint_authentication_request_succeed">
+        Fingerprint authentication succeeded!
+    </string>
+
+    <string name="txt_fingerprint_authentication_request_failure">
+        Fingerprint authentication failed.
+    </string>
+
+</resources>

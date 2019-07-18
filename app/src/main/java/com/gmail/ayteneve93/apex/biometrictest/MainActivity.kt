@@ -24,23 +24,21 @@ class MainActivity : AppCompatActivity() {
             mBiometricManager.requestFingerprintAuthentication(this)
                 .onUnsupported {
                     // 아직 지원되지 않는 인증 메소드의 경우
-                    Toast.makeText(this, "지원되지 않는 인증방식입니다.", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, R.string.txt_fingerprint_authentication_request_unsupported, Toast.LENGTH_LONG).show()
                 }
                 .onError {
                     // 인증 도중 에러가 발생한 경우
                     errorCode, errString ->
-                    Toast.makeText(this, "인증 도중 에러가 발생했습니다." +
-                            "\n에러코드 : $errorCode, 에러 메시지 : $errString", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, getString(R.string.txt_fingerprint_authentication_request_error, errorCode, errString), Toast.LENGTH_LONG).show()
                 }
                 .onSucceed {
                     // 인증에 성공한 경우
-                    result ->
-                    Toast.makeText(this, "지문 인증에 성공하였습니다!", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, R.string.txt_fingerprint_authentication_request_succeed, Toast.LENGTH_LONG).show()
                     startActivity(Intent(this, Main2Activity::class.java)) // 성공시 다음 Activity 로 화면 전환
                 }
                 .onFailure {
                     // 인증에 실패한 경우
-                    Toast.makeText(this, "지문 인증에 실패하였습니다.", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, R.string.txt_fingerprint_authentication_request_failure, Toast.LENGTH_LONG).show()
                 }
         }
 
