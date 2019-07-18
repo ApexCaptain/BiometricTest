@@ -29,34 +29,6 @@ public class Main2Activity extends AppCompatActivity {
 
         ((MyApplication)getApplication()).getBiometricManagerComponent().inject(this);
 
-        mBindingViews.fingerPrintRequestButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mBiometricManager.requestFingerprintAuthentication(Main2Activity.this, new BiometricRequestResultListener() {
-                    @Override
-                    public void onBiometricRequestResult(@NotNull BiometricRequestResult biometricRequestResult, @Nullable Integer errorCode, @Nullable String errString) {
-                        switch (biometricRequestResult) {
-                            case UNSUPPORTED:
-                                // 아직 지원되지 않는 인증 메소드의 경우
-                                Toast.makeText(Main2Activity.this, R.string.txt_fingerprint_authentication_request_unsupported, Toast.LENGTH_LONG).show();
-                                break;
-                            case ERROR :
-                                Toast.makeText(Main2Activity.this,
-                                        getString(R.string.txt_fingerprint_authentication_request_error, errorCode, errString), Toast.LENGTH_LONG).show();
-                                break;
-                            case SUCCEED:
-                                Toast.makeText(Main2Activity.this, R.string.txt_fingerprint_authentication_request_succeed, Toast.LENGTH_LONG).show();
-                                break;
-                            case FAILURE:
-                                Toast.makeText(Main2Activity.this, R.string.txt_fingerprint_authentication_request_failure, Toast.LENGTH_LONG).show();
-                                break;
-                        }
-                        finish();
-                    }
-                });
-            }
-        });
-
         mBindingViews.fingerPrintRequestButton2.setOnClickListener((v) ->
             mBiometricManager.requestFingerprintAuthentication(this, (biometricRequestResult, errorCode, errString) -> {
                 switch (biometricRequestResult) {
